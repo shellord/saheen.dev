@@ -1,0 +1,22 @@
+{
+  "name": "saheen.github.io",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.0.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "eslint": "8.4.0",
+    "eslint-config-next": "12.0.5",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
+  }
+}
