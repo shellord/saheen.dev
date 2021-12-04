@@ -19,6 +19,7 @@ export default function AboutSection() {
           width={'200'}
           height={'200'}
           className='rounded-full'
+          priority={true}
         />
       </motion.div>
       <motion.div
