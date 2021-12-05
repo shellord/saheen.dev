@@ -3,22 +3,22 @@
   "projects":
   [
     {
-      "title": "project 1",
-      "description": "High-end, custom residential renovaters serving Fraser Valley homeowners.",
-      "image":"https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-      "link": "https://www.google.com"
+      "title": "Mash Coin",
+      "description": "Mash Coin is ERC20 compliant token.",
+      "image":"/images/mash.jpeg",
+      "link": "https://github.com/shellord/MashCoin"
     },
    {
-     "title": "project 2",
-      "description": "project 2 description",
-      "image":"https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-      "link": "https://www.google.com"
+     "title": "WatchParty",
+      "description": "A webapp to watch videos with friends.",
+      "image":"/images/watchparty.jpeg",
+      "link": "https://github.com/shellord/watchparty"
    },
    {
-      "title": "project 3",
-        "description": "project 3 description",
-        "image":"https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-        "link": "https://www.google.com"
+      "title": "Dank Memes",
+        "description": "A React app to view and share memes.",
+        "image":"/images/laugh.jpeg",
+        "link": "https://github.com/shellord/Dank-Memes"
    }
   ]
 }

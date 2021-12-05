@@ -44,9 +44,10 @@ export default function ProjectSection() {
               key={index}
             >
               <Image
-                src='/images/test.jpeg'
+                // src='/images/test.jpeg'
+                src={project.image}
                 layout='fill'
-                className='opacity-50'
+                className='opacity-50 img-cover'
                 priority
               />
               <div className='w-full h-full absolute bg-purple-500 mix-blend-multiply group-hover:bg-purple-900 duration-500 ' />
