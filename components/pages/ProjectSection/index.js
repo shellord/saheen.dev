@@ -41,6 +41,7 @@ export default function ProjectSection() {
             <motion.li
               className='flex flex-1 w-2/3  md:h-2/3 justify-center items-center m-2 group'
               variants={item}
+              key={index}
             >
               <Image
                 src='/images/test.jpeg'
@@ -56,7 +57,7 @@ export default function ProjectSection() {
                 <p className='text-white z-20 text-lg md:text-2xl font-thin'>
                   {project.description}
                 </p>
-                <a href={project.link} target='_blank'>
+                <a href={project.link} target='_blank' rel='noreferrer'>
                   <button className='text-white font-thin text-sm md:text-lg mt-4 md:mt-10 p-2 border  border-green-800 border-t-20 rounded-md hover:bg-indigo-700'>
                     View Project
                   </button>
