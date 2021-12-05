@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function AboutSection() {
   return (
-    <section className='flex flex-col h-screen items-center justify-center snap-start bg-black px-10'>
+    <section className='flex flex-col h-screen  items-center justify-center snap-start bg-black px-10 text'>
       <motion.div
         initial='hidden'
         whileInView='visible'
@@ -19,7 +19,7 @@ export default function AboutSection() {
           width={'200'}
           height={'200'}
           className='rounded-full'
-          priority={true}
+          priority
         />
       </motion.div>
       <motion.div

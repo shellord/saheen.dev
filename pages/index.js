@@ -1,6 +1,11 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
-import { HeroSection, AboutSection, BlogSection } from '../components/pages'
+import {
+  HeroSection,
+  AboutSection,
+  ProjectSection,
+  ContactSection,
+} from '../components/pages'
 
 export default function Home() {
   return (
@@ -11,7 +16,8 @@ export default function Home() {
       <main className='h-screen overflow-y-scroll snap snap-y snap-mandatory'>
         <HeroSection />
         <AboutSection />
-        <BlogSection />
+        <ProjectSection />
+        <ContactSection />
       </main>
     </>
   )
