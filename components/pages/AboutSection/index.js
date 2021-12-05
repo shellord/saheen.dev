@@ -3,11 +3,10 @@ import { motion } from 'framer-motion'
 
 export default function AboutSection() {
   return (
-    <section className='flex flex-col h-screen  items-center justify-center snap-start bg-black px-10 text'>
+    <section className='flex flex-col h-screen  items-center justify-center snap-start bg-black px-10 '>
       <motion.div
         initial='hidden'
         whileInView='visible'
-        // viewport={{ once: true }}
         transition={{ duration: 0.3 }}
         variants={{
           visible: { opacity: 1, scale: 1 },
