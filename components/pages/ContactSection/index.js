@@ -37,7 +37,6 @@ export default function ContatSection() {
           href='https://www.youtube.com/channel/UCO9nfwZE7J7GkubwmUna9tA'
           target='_blank'
           rel='noreferrer'
-          rel='noreferrer'
           variants={item}
         >
           <SiYoutube
@@ -48,7 +47,6 @@ export default function ContatSection() {
         <motion.a
           href='https://twitter.com/N3ckr0s'
           target='_blank'
-          rel='noreferrer'
           rel='noreferrer'
           variants={item}
         >
