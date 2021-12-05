@@ -16,7 +16,7 @@ export default function ContatSection() {
   }
 
   return (
-    <section className='flex flex-col h-screen snap-start items-center justify-center'>
+    <section className='flex flex-col h-screen snap-start items-center justify-center bg-black'>
       <motion.div
         initial='hidden'
         whileInView='visible'
