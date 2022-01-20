@@ -1,5 +1,5 @@
 {
-  "name": "saheen.github.io",
+  "name": "saheen.me",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,18 +8,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^5.3.3",
-    "next": "12.0.5",
+    "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "typewriter-effect": "^2.18.2"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "eslint": "8.4.0",
-    "eslint-config-next": "12.0.5",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
+    "@types/node": "17.0.10",
+    "@types/react": "17.0.38",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8",
+    "postcss": "^8.4.5",
+    "prisma": "^3.8.1",
+    "tailwindcss": "^3.0.15",
+    "typescript": "4.5.4"
   }
 }
