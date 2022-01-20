@@ -2,6 +2,13 @@
 
 My personal portfolio website.
 
+## Todos
+
+- Add home page
+- Add about page
+- Add blog page
+- Add comments with authentication
+
 ## Tech Stack
 
 - Nextjs
