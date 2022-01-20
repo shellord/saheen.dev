@@ -7,3 +7,8 @@ generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["dataproxy"]
 }
+
+model Test {
+  id   Int    @id
+  name String
+}
