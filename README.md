@@ -24,3 +24,7 @@ My personal portfolio website.
   > npm run dev
 - build the static site
   > npm run build
+
+## License
+
+MIT
