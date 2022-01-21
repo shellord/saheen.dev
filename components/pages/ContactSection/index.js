@@ -1,4 +1,4 @@
-import { SiInstagram, SiYoutube, SiTwitter } from 'react-icons/si'
+import { SiInstagram, SiYoutube, SiTwitter, SiGithub } from 'react-icons/si'
 import { motion } from 'framer-motion'
 
 export default function ContatSection() {
@@ -52,6 +52,17 @@ export default function ContatSection() {
           variants={item}
         >
           <SiTwitter
+            size={100}
+            className='mx-10 mt-10 md:mt-0 md:opacity-80 md:hover:opacity-100 '
+          />
+        </motion.a>
+        <motion.a
+          href='https://github.com/shellord'
+          target='_blank'
+          rel='noreferrer'
+          variants={item}
+        >
+          <SiGithub
             size={100}
             className='mx-10 mt-10 md:mt-0 md:opacity-80 md:hover:opacity-100 '
           />
