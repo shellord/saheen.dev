@@ -3,12 +3,10 @@ import Navbar from '@/components/Navbar'
 
 const MainLayout = ({ children }: PropsWithChildren<{}>) => {
   return (
-    <div className='min-h-screen dark:bg-gray-900 bg-neutral-50 text-gray-900 dark:text-gray-50'>
-      <div className='max-w-2xl min-h-screen mx-auto pt-10 px-5'>
+    <div className='min-h-[150vh] dark:bg-gray-900 bg-gray-50 text-gray-900 dark:text-gray-50 '>
+      <div className='max-w-3xl min-h-screen  mx-auto px-5'>
         <Navbar />
-        <main className='flex flex-col justify-center bg-gray-50 dark:bg-gray-900'>
-          {children}
-        </main>
+        <main className='bg-gray-50 dark:bg-gray-900 pt-20'>{children}</main>
       </div>
     </div>
   )

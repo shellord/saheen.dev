@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 import { useTheme } from 'next-themes'
+import MobileMenu from '@/components/MobileMenu'
 
 type NavProps = {
   href: string
@@ -22,7 +23,7 @@ const Navbar = () => {
         <a
           className={`${isActive(
             href
-          )} dark:hover:bg-gray-900 hover:bg-gray-200 rounded-lg transition-all sm:px-3 sm:py-2 hidden md:inline`}
+          )} rounded-lg transition-all sm:px-3 sm:py-2 hidden md:inline dark:hover:bg-gray-800 hover:bg-gray-200 `}
         >
           {label}
         </a>
@@ -31,27 +32,29 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='ml-[-0.60rem] flex justify-between items-center'>
-      <div>
-        <NavItem href='/' label='Home' />
-        <NavItem href='/blog' label='Blog' />
-        <NavItem href='/projects' label='Projects' />
-        <NavItem href='/contact' label='Contact' />
-      </div>
-      <div className=''>
-        <button
-          type='button'
-          className='w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-800 flex items-center justify-center  hover:ring-2 ring-zinc-300 transition-all'
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          {theme === 'dark' ? (
-            <HiOutlineSun size={20} />
-          ) : (
-            <HiOutlineMoon size={20} />
-          )}
-        </button>
-      </div>
-    </nav>
+    <div className='dark:bg-gray-900 dark:bg-opacity-30 bg-gray-50/30 sticky top-0 z-99 mx-auto  px-0 pt-5 backdrop-filter backdrop-blur-lg '>
+      <nav className=' flex justify-between items-center '>
+        <MobileMenu />
+        <div className='ml-[-0.60rem]'>
+          <NavItem href='/' label='Home' />
+          <NavItem href='/blog' label='Blog' />
+          <NavItem href='/projects' label='Projects' />
+          <NavItem href='/contact' label='Contact' />
+        </div>
+        <div>
+          <button
+            className='w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-800 flex items-center justify-center  hover:ring-2 ring-zinc-300 transition-all'
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          >
+            {theme === 'dark' ? (
+              <HiOutlineSun size={20} />
+            ) : (
+              <HiOutlineMoon size={20} />
+            )}
+          </button>
+        </div>
+      </nav>
+    </div>
   )
 }
 
