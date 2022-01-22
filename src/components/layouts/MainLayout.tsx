@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import Navbar from '../Navbar'
+import Navbar from '@/components/Navbar'
 
 const MainLayout = ({ children }: PropsWithChildren<{}>) => {
   return (
