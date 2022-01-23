@@ -32,7 +32,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='dark:bg-gray-900 dark:bg-opacity-30 bg-gray-50/30 sticky top-0  px-0 pt-5 backdrop-filter backdrop-blur-lg '>
+    <div className='dark:bg-gray-900 dark:bg-opacity-30 bg-gray-50/30  fixed top-0 left-0 right-0 max-w-3xl  z-50 mx-auto  px-5 pt-5 backdrop-filter backdrop-blur-lg '>
       <nav className=' flex justify-between items-center '>
         <MobileMenu />
         <div className='ml-[-0.60rem]'>
