@@ -5,12 +5,14 @@ import Link from 'next/link'
 import BlogPostCard from '@/components/BlogPostCard'
 import TechStackCard from '@/components/TechStackCard'
 import techstack from 'data/techstack.json'
+import { motion } from 'framer-motion'
 
 type SocialButtonProps = {
   href: string
   icon: any
   label: string
 }
+
 const SocialButton = ({ icon, href, label }: SocialButtonProps) => {
   return (
     <Link href={href}>
@@ -25,6 +27,10 @@ const SocialButton = ({ icon, href, label }: SocialButtonProps) => {
 }
 
 const Home: NextPage = () => {
+  const listVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  }
   return (
     <div className='mt-10'>
       <div className='flex flex-col-reverse md:flex-row'>
@@ -73,20 +79,16 @@ const Home: NextPage = () => {
       </div>
       <div className='mt-16'>
         <p className='text-2xl sm:text-4xl font-bold'>My TechStack</p>
-        <div className='mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4'>
-          {techstack.items.map(
-            ({ id, title, image, width, height, href }: any) => (
-              <TechStackCard
-                key={id}
-                title={title}
-                image={image}
-                width={width}
-                height={height}
-                href={href}
-              />
-            )
-          )}
-        </div>
+        <motion.div
+          className='mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4'
+          variants={listVariants}
+          initial='hidden'
+          whileInView='visible'
+        >
+          {techstack.items.map(({ id, title, image, href }: any) => (
+            <TechStackCard key={id} title={title} image={image} href={href} />
+          ))}
+        </motion.div>
       </div>
       <div className='mt-16'>
         <p className='text-2xl sm:text-4xl font-bold'>Featured Posts</p>
