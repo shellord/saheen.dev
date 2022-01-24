@@ -3,7 +3,8 @@ import Image from 'next/image'
 import { SiInstagram, SiYoutube, SiTwitter, SiGithub } from 'react-icons/si'
 import Link from 'next/link'
 import BlogPostCard from '@/components/BlogPostCard'
-import ProjectCard from '@/components/ProjectCard'
+import TechStackCard from '@/components/TechStackCard'
+import techstack from 'data/techstack.json'
 
 type SocialButtonProps = {
   href: string
@@ -68,6 +69,23 @@ const Home: NextPage = () => {
             className='rounded-full'
             priority
           />
+        </div>
+      </div>
+      <div className='mt-16'>
+        <p className='text-2xl sm:text-4xl font-bold'>My TechStack</p>
+        <div className='mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4'>
+          {techstack.items.map(
+            ({ id, title, image, width, height, href }: any) => (
+              <TechStackCard
+                key={id}
+                title={title}
+                image={image}
+                width={width}
+                height={height}
+                href={href}
+              />
+            )
+          )}
         </div>
       </div>
       <div className='mt-16'>
