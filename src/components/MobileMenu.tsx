@@ -39,7 +39,7 @@ const MobileMenu = () => {
           <motion.div variants={item}>
             <button
               onClick={() => setIsOpen(false)}
-              className='mb-5 w-full text-left py-3 pl-2 border-b-2 border-gray-800'
+              className='mb-5 w-full text-left py-3 border-b-2 border-gray-800'
             >
               {label}
             </button>
@@ -57,7 +57,7 @@ const MobileMenu = () => {
       </button>
       {isOpen && (
         <motion.div
-          className='dark:bg-gray-900 bg-gray-50 absolute w-full h-screen pt-6 px-5 '
+          className='dark:bg-gray-900 bg-gray-50 absolute w-full h-screen pt-6 pr-10 '
           initial='hidden'
           animate='visible'
           variants={list}

@@ -1,7 +1,106 @@
 import type { NextPage } from 'next'
+import Image from 'next/image'
+import { SiInstagram, SiYoutube, SiTwitter, SiGithub } from 'react-icons/si'
+import Link from 'next/link'
+import BlogPostCard from '@/components/BlogPostCard'
+import ProjectCard from '@/components/ProjectCard'
+
+type SocialButtonProps = {
+  href: string
+  icon: any
+  label: string
+}
+const SocialButton = ({ icon, href, label }: SocialButtonProps) => {
+  return (
+    <Link href={href}>
+      <a target='_blank'>
+        <button className='flex items-center text-sm px-3 py-2 dark:hover:bg-gray-800 rounded-lg hover:bg-gray-200 transition-all'>
+          {icon}
+          <span className='pl-2'>{label}</span>
+        </button>
+      </a>
+    </Link>
+  )
+}
 
 const Home: NextPage = () => {
-  return <p className='text-5xl font-bold'>Hello World</p>
+  return (
+    <div className='mt-10'>
+      <div className='flex flex-col-reverse md:flex-row'>
+        <div className='flex flex-col flex-1 items-center justify-end md:items-start md:pr-10'>
+          <p className='text-2xl sm:text-4xl font-bold mt-10 md:mt-0'>
+            Hi 👋 , I&apos;m Saheen Shoukath
+          </p>
+          <p className='mt-2 text-sm'>Your friendly neighborhood developer</p>
+          <p className='text-gray-500 mt-2'>
+            I&apos;m a computer science engineer and a freelance full-stack
+            developer. I love to build things and solve problems.
+          </p>
+          <div className='sm:ml-[-0.5rem] grid grid-cols-3 sm:grid-cols-none sm:grid-flow-col mt-2'>
+            <SocialButton
+              label='Twitter'
+              href='https://twitter.com/N3ckr0s'
+              icon={<SiTwitter />}
+            />
+            <SocialButton
+              label='Instagram'
+              href='https://www.instagram.com/saheen.dev/'
+              icon={<SiInstagram />}
+            />
+            <SocialButton
+              label='Github'
+              href='https://github.com/shellord'
+              icon={<SiGithub />}
+            />
+            <SocialButton
+              label='Youtube'
+              href='https://www.youtube.com/channel/UCO9nfwZE7J7GkubwmUna9tA'
+              icon={<SiYoutube />}
+            />
+          </div>
+        </div>
+        <div className='flex justify-center md:justify-end items-start'>
+          <Image
+            src='https://avatars.githubusercontent.com/u/2632896'
+            width={176}
+            height={176}
+            alt='Saheen'
+            className='rounded-full'
+            priority
+          />
+        </div>
+      </div>
+      <div className='mt-16'>
+        <p className='text-2xl sm:text-4xl font-bold'>Featured Posts</p>
+        <div className='mt-5 sm:ml-[-1.25rem]'>
+          <BlogPostCard
+            title='How to use Next Js'
+            description='this is how you use lorem impasum this is how I do things in life'
+            date={'January 2022'}
+            slug='/blog/how-to-use-next-js'
+            readingTime='2 min read'
+          />
+          <BlogPostCard
+            title='How to use Next Js'
+            description='this is how you use lorem impasum this is how I do things in life'
+            date={'January 2022'}
+            slug='/blog/how-to-use-next-js'
+            readingTime='2 min read'
+          />
+          <BlogPostCard
+            title='How to use Next Js'
+            description='this is how you use lorem impasum this is how I do things in life'
+            date={'January 2022'}
+            slug='/blog/how-to-use-next-js'
+            readingTime='2 min read'
+          />
+        </div>
+        <p className='mt-3 text-gray-500 dark:hover:text-gray-50 hover:text-gray-900 transition-all'>
+          Read all Posts →
+        </p>
+      </div>
+    </div>
+  )
 }
 
 export default Home
