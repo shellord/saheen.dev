@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Next.js",
+      "image": "/images/nextjs.svg",
+      "href": "https://nextjs.org/"
+    },
+    {
+      "id": 2,
+      "title": "Prisma",
+      "image": "/images/prisma.svg",
+      "href": "https://www.prisma.io/"
+    },
+    {
+      "id": 3,
+      "title": "TailwindCSS",
+      "image": "/images/tailwindcss.svg",
+      "href": "https://tailwindcss.com/"
+    },
+    {
+      "id": 4,
+      "title": "PostgreSQL",
+      "image": "/images/postgresql.png",
+      "href": "https://www.postgresql.org/"
+    }
+  ]
+}

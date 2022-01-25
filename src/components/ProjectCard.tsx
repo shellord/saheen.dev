@@ -8,16 +8,13 @@ type Props = {
 
 const ProjectCard = ({ title, description, image }: Props) => {
   return (
-    <div className='relative ml-2 flex flex-1 w-1/2'>
-      <Image
-        src='/images/mash.jpeg'
-        layout='fill'
-        alt='mash coin'
-        className='object-cover'
-      />
-      <div className='absolute'>
-        <p>{title}</p>
-        <p>{description}</p>
+    <div className='flex flex-col relative w-[22rem] h-[15rem] rounded-lg'>
+      <Image src={image} alt={title} layout='fill' className='rounded-lg' />
+      <div className='flex flex-1  justify-center items-end'>
+        <div className='absolute w-full h-16 bg-black text-white flex flex-col items-center justify-center rounded-b-lg'>
+          <p className='text-2xl font-bold'>{title}</p>
+          <p className='text-sm'>{description}</p>
+        </div>
       </div>
     </div>
   )

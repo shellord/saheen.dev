@@ -6,6 +6,7 @@ import BlogPostCard from '@/components/BlogPostCard'
 import TechStackCard from '@/components/TechStackCard'
 import techstack from 'data/techstack.json'
 import { motion } from 'framer-motion'
+import ProjectCard from '@/components/ProjectCard'
 
 type SocialButtonProps = {
   href: string
@@ -90,6 +91,7 @@ const Home: NextPage = () => {
           ))}
         </motion.div>
       </div>
+
       <div className='mt-16'>
         <p className='text-2xl sm:text-4xl font-bold'>Featured Posts</p>
         <div className='mt-5 sm:ml-[-1.25rem]'>
@@ -97,21 +99,21 @@ const Home: NextPage = () => {
             title='How to use Next Js'
             description='this is how you use lorem impasum this is how I do things in life'
             date={'January 2022'}
-            slug='/blog/how-to-use-next-js'
+            slug='how-to-use-next-js'
             readingTime='2 min read'
           />
           <BlogPostCard
             title='How to use Next Js'
             description='this is how you use lorem impasum this is how I do things in life'
             date={'January 2022'}
-            slug='/blog/how-to-use-next-js'
+            slug='how-to-use-next-js'
             readingTime='2 min read'
           />
           <BlogPostCard
             title='How to use Next Js'
             description='this is how you use lorem impasum this is how I do things in life'
             date={'January 2022'}
-            slug='/blog/how-to-use-next-js'
+            slug='how-to-use-next-js'
             readingTime='2 min read'
           />
         </div>
@@ -119,6 +121,36 @@ const Home: NextPage = () => {
           Read all Posts →
         </p>
       </div>
+      {/* <div className='mt-16'>
+        <p className='text-2xl sm:text-4xl font-bold'>My Projects</p>
+        <div className='mt-5 grid grid-flow-row gap-10 md:grid-flow-col grid-rows-3'>
+          <ProjectCard
+            title='mash coin'
+            description='mash coin description'
+            image='/images/mash.jpeg'
+          />
+          <ProjectCard
+            title='mash coin'
+            description='mash coin description'
+            image='/images/saheen.jpg'
+          />
+          <ProjectCard
+            title='mash coin'
+            description='mash coin description'
+            image='/images/saheen.jpg'
+          />
+          <ProjectCard
+            title='mash coin'
+            description='mash coin description'
+            image='/images/saheen.jpg'
+          />
+          <ProjectCard
+            title='mash coin'
+            description='mash coin description'
+            image='/images/saheen.jpg'
+          />
+        </div>
+      </div> */}
     </div>
   )
 }
