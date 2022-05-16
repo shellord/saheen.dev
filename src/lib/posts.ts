@@ -36,7 +36,6 @@ export async function getSortedPostsData() {
     const readingTime = rt(contenthtml).text
 
     const { title, date, description } = matterResult.data
-    console.log('date', date)
     return {
       slug,
       title,

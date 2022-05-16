@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           <div className='sm:ml-[-0.5rem] grid grid-cols-3 sm:grid-cols-none sm:grid-flow-col mt-2'>
             <SocialButton
               label='Twitter'
-              href='https://twitter.com/N3ckr0s'
+              href='https://twitter.com/shell0rd'
               icon={<SiTwitter />}
             />
             <SocialButton
@@ -117,9 +117,13 @@ const Home: NextPage = () => {
             readingTime='2 min read'
           />
         </div>
-        <p className='mt-3 text-gray-500 dark:hover:text-gray-50 hover:text-gray-900 transition-all'>
-          Read all Posts →
-        </p>
+        <Link href={`/blog`}>
+          <a>
+            <p className='mt-3 text-gray-500 dark:hover:text-gray-50 hover:text-gray-900 transition-all'>
+              Read all Posts →
+            </p>
+          </a>
+        </Link>
       </div>
       {/* <div className='mt-16'>
         <p className='text-2xl sm:text-4xl font-bold'>My Projects</p>
