@@ -2,27 +2,17 @@
   "items": [
     {
       "id": 1,
-      "title": "Next.js",
-      "image": "/images/nextjs.svg",
-      "href": "https://nextjs.org/"
+      "title": "watashi",
+      "description": "A social media app to share your interests with your friends and followers",
+      "image": "https://raw.githubusercontent.com/shellord/watashi-app/main/public/screenshots/Screenshot%202022-05-16%20at%2010.55.22%20PM.png",
+      "href": "https://github.com/shellord/watashi-app"
     },
     {
       "id": 2,
-      "title": "Prisma",
+      "title": "Personal Blog",
       "image": "/images/prisma.svg",
-      "href": "https://www.prisma.io/"
-    },
-    {
-      "id": 3,
-      "title": "TailwindCSS",
-      "image": "/images/tailwindcss.svg",
-      "href": "https://tailwindcss.com/"
-    },
-    {
-      "id": 4,
-      "title": "PostgreSQL",
-      "image": "/images/postgresql.png",
-      "href": "https://www.postgresql.org/"
+      "description": "My personal blog with NextJS and Tailwindcss",
+      "href": "https://github.com/shellord/saheen.me"
     }
   ]
 }
