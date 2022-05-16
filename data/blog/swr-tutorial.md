@@ -1,7 +1,7 @@
 ---
 title: Generating blurDataURL for remote images in Next.js
 description: Achieving a blur effect for all images, both local and remote, using Next.js, MDX and Rehype.
-date: '2022-01-01'
+date: '01-01-2022'
 ---
 
 ```js

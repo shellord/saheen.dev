@@ -17,7 +17,7 @@ const BlogPostCard = ({
           <div className='text-gray-500'>
             <p className='text-md mt-1'>{description}</p>
             <div className='flex text-sm mt-1'>
-              <p className='mr-2'>{moment(date).fromNow()}</p>
+              <p className='mr-2'>{moment(date, 'DD-MM-YYYY').fromNow()}</p>
               <span>·</span>
               <p className='ml-2'>{readingTime}</p>
             </div>
