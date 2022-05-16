@@ -64,10 +64,10 @@ export async function getPostData(slug: string | string[] | undefined) {
   const matterResult = matter(fileContents)
   const processedContent = await unified()
     .use(remarkParse)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeHighlight)
     .use(rehypeFormat)
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 

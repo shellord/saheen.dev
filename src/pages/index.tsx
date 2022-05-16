@@ -96,25 +96,11 @@ const Home: NextPage = () => {
         <p className='text-2xl sm:text-4xl font-bold'>Featured Posts</p>
         <div className='mt-5 sm:ml-[-1.25rem]'>
           <BlogPostCard
-            title='How to use Next Js'
-            description='this is how you use lorem impasum this is how I do things in life'
-            date={'January 2022'}
-            slug='how-to-use-next-js'
-            readingTime='2 min read'
-          />
-          <BlogPostCard
-            title='How to use Next Js'
-            description='this is how you use lorem impasum this is how I do things in life'
-            date={'January 2022'}
-            slug='how-to-use-next-js'
-            readingTime='2 min read'
-          />
-          <BlogPostCard
-            title='How to use Next Js'
-            description='this is how you use lorem impasum this is how I do things in life'
-            date={'January 2022'}
-            slug='how-to-use-next-js'
-            readingTime='2 min read'
+            title='Why I start to blog again?'
+            description='The reason I started blogging again is because I want to share my thoughts and learnings.'
+            date={'11-05-2022'}
+            slug='why-i-blog-again'
+            readingTime='1 min read'
           />
         </div>
         <Link href={`/blog`}>

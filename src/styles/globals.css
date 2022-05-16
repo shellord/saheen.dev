@@ -12,6 +12,10 @@
   @apply p-0 bg-transparent;
 }
 
+.prose strong{
+  @apply font-bold;
+}
+
 
 pre code.hljs {
   display: block;
