@@ -11,6 +11,8 @@
 .prose pre {
   @apply p-0 bg-transparent;
 }
+
+
 pre code.hljs {
   display: block;
   overflow-x: auto;
