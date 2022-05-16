@@ -11,14 +11,14 @@ type Props = {
 const ProjectCard = ({ title, description, image, href }: Props) => {
   return (
     <Link href={href}>
-      <a>
-        <div className='shadow'>
+      <a target='_blank'>
+        <div className='shadow group'>
           <div className='flex relative h-44'>
             <Image
               src={image}
               layout='fill'
               alt='project'
-              className='object-cover object-top'
+              className='object-cover object-top group-hover:scale-105 transition-all'
             />
           </div>
           <div className='flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 p-2 items-center h-24 '>

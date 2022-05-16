@@ -10,7 +10,7 @@
     {
       "id": 2,
       "title": "Personal Blog",
-      "image": "/images/prisma.svg",
+      "image": "https://raw.githubusercontent.com/shellord/saheen.me/master/public/screenshots/Screenshot%202022-05-16%20at%2011.12.55%20PM.png",
       "description": "My personal blog with NextJS and Tailwindcss",
       "href": "https://github.com/shellord/saheen.me"
     }
