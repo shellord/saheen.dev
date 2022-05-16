@@ -1,22 +1,33 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 type Props = {
   title: string
   description: string
   image: string
+  href: string
 }
 
-const ProjectCard = ({ title, description, image }: Props) => {
+const ProjectCard = ({ title, description, image, href }: Props) => {
   return (
-    <div className='flex flex-col relative w-[22rem] h-[15rem] rounded-lg'>
-      <Image src={image} alt={title} layout='fill' className='rounded-lg' />
-      <div className='flex flex-1  justify-center items-end'>
-        <div className='absolute w-full h-16 bg-black text-white flex flex-col items-center justify-center rounded-b-lg'>
-          <p className='text-2xl font-bold'>{title}</p>
-          <p className='text-sm'>{description}</p>
+    <Link href={href}>
+      <a>
+        <div className='shadow'>
+          <div className='flex relative h-44'>
+            <Image
+              src={image}
+              layout='fill'
+              alt='project'
+              className='object-cover object-top'
+            />
+          </div>
+          <div className='flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 p-2 items-center h-24 '>
+            <p className='text-2xl sm:text-4xl font-bold'>{title}</p>
+            <p className='text-sm text-center'>{description}</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </a>
+    </Link>
   )
 }
 
