@@ -1,17 +1,24 @@
 import { NextPage, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import { getAllPostSlugs, getPostData } from '@/lib/posts'
+import SeoContainer from '@/components/SeoContainer'
 
 const Post: NextPage<null> = ({
   postData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className='mt-10'>
-      <p className='text-2xl font-bold sm:text-4xl'>{postData.title}</p>
-      <div
-        className='mt-5 markdown-body prose dark:prose-invert'
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
-    </div>
+    <SeoContainer
+      title={postData.title}
+      date={postData.date}
+      description={postData.description}
+    >
+      <div className='mt-10'>
+        <p className='text-2xl font-bold sm:text-4xl'>{postData.title}</p>
+        <div
+          className='mt-5 markdown-body prose dark:prose-invert'
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </div>
+    </SeoContainer>
   )
 }
 
