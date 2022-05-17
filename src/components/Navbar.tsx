@@ -23,7 +23,7 @@ const Navbar = () => {
       return
     }
     setTheme(theme === 'light' ? 'dark' : 'light')
-    sound.src = 'sounds/click.mp3'
+    sound.src = '/sounds/click.mp3'
     sound.play()
   }
 
@@ -31,7 +31,7 @@ const Navbar = () => {
     if (!sound) {
       return
     }
-    sound.src = 'sounds/click2.mp3'
+    sound.src = '/sounds/click2.mp3'
     sound.play()
   }
 
