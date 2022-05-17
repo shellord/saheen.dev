@@ -10,6 +10,7 @@ const Post: NextPage<null> = ({
       title={postData.title}
       date={postData.date}
       description={postData.description}
+      type='article'
     >
       <div className='mt-10'>
         <p className='text-2xl font-bold sm:text-4xl'>{postData.title}</p>
