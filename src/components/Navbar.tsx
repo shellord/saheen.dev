@@ -12,22 +12,42 @@ type NavProps = {
 const Navbar = () => {
   const { theme, setTheme } = useTheme()
   const router = useRouter()
+  const sound = typeof Audio !== 'undefined' && new Audio()
 
   const isActive = (path: string) => {
     return router.pathname === path ? 'font-semibold' : 'text-gray-500'
   }
 
+  const darkModeSwitchHandler = () => {
+    if (!sound) {
+      return
+    }
+    setTheme(theme === 'light' ? 'dark' : 'light')
+    sound.src = 'sounds/click.mp3'
+    sound.play()
+  }
+
+  const NavClickHandler = () => {
+    if (!sound) {
+      return
+    }
+    sound.src = 'sounds/click2.mp3'
+    sound.play()
+  }
+
   const NavItem = ({ href, label }: NavProps) => {
     return (
-      <Link href={href}>
-        <a
-          className={`${isActive(
-            href
-          )} rounded-lg transition-all sm:px-3 sm:py-2 hidden md:inline dark:hover:bg-gray-800 hover:bg-gray-200 `}
-        >
-          {label}
-        </a>
-      </Link>
+      <button onClick={NavClickHandler}>
+        <Link href={href}>
+          <a
+            className={`${isActive(
+              href
+            )} rounded-lg transition-all sm:px-3 sm:py-2 hidden md:inline dark:hover:bg-gray-800 hover:bg-gray-200 `}
+          >
+            {label}
+          </a>
+        </Link>
+      </button>
     )
   }
 
@@ -44,7 +64,7 @@ const Navbar = () => {
         <div>
           <button
             className='w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-800 flex items-center justify-center  hover:ring-2 ring-zinc-300 transition-all'
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={darkModeSwitchHandler}
           >
             {theme === 'dark' ? (
               <HiOutlineSun size={20} />
