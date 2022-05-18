@@ -13,9 +13,9 @@ const Post: NextPage<null> = ({
       type='article'
     >
       <div className='mt-10'>
-        <p className='text-2xl font-bold sm:text-4xl'>{postData.title}</p>
+        <p className='font-bold text-5xl sm:text-6xl'>{postData.title}</p>
         <div
-          className='mt-5 markdown-body prose dark:prose-invert'
+          className='mt-10 markdown-body prose dark:prose-invert'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </div>
