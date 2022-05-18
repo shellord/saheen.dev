@@ -16,6 +16,9 @@
   @apply font-bold;
 }
 
+.prose h2{
+  @apply sm:text-4xl;
+}
 
 pre code.hljs {
   display: block;
