@@ -10,6 +10,7 @@ type MenuProps = {
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const sound = typeof Audio !== 'undefined' && new Audio()
 
   const list = {
     hidden: { opacity: 0 },
@@ -31,14 +32,21 @@ const MobileMenu = () => {
       document.body.classList.remove('overflow-hidden')
     }
   }, [isOpen])
-
+  const navClickHandler = () => {
+    if (!sound) {
+      return
+    }
+    sound.src = '/sounds/click2.mp3'
+    sound.play()
+    setIsOpen(false)
+  }
   const MenuItem = ({ href, label }: MenuProps) => {
     return (
       <Link href={href}>
         <a>
           <motion.div variants={item}>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={navClickHandler}
               className='mb-5 w-full text-left py-3 border-b-2 border-gray-800'
             >
               {label}

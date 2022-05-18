@@ -27,7 +27,7 @@ const Navbar = () => {
     sound.play()
   }
 
-  const NavClickHandler = () => {
+  const navClickHandler = () => {
     if (!sound) {
       return
     }
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   const NavItem = ({ href, label }: NavProps) => {
     return (
-      <button onClick={NavClickHandler}>
+      <button onClick={navClickHandler}>
         <Link href={href}>
           <a
             className={`${isActive(
