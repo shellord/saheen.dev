@@ -1,41 +1,28 @@
 {
-  "name": "saheen.me",
+  "name": "saheen-dev",
+  "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
-    "@prisma/client": "^3.8.1",
-    "framer-motion": "^6.2.1",
-    "gray-matter": "^4.0.3",
-    "moment": "^2.29.1",
-    "next": "12.0.8",
-    "next-themes": "^0.0.15",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "reading-time": "^1.5.0",
-    "rehype-format": "^4.0.1",
-    "rehype-highlight": "^5.0.2",
-    "rehype-stringify": "^9.0.2",
-    "remark-parse": "^10.0.1",
-    "remark-rehype": "^10.1.0",
-    "unified": "^10.1.1"
+    "motion": "^11.18.0",
+    "next": "16.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.0",
-    "@types/marked": "^4.0.1",
-    "@types/node": "17.0.10",
-    "@types/react": "^17.0.38",
-    "autoprefixer": "^10.4.2",
-    "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8",
-    "postcss": "^8.4.5",
-    "prisma": "^3.8.1",
-    "tailwindcss": "^3.0.15",
-    "typescript": "4.5.4"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
   }
 }
