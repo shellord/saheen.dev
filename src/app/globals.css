@@ -176,17 +176,53 @@ ul.facts li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; 
 @keyframes bar { 0%, 100% { height: 25%; } 50% { height: 100%; } }
 
 /* ——— map ——— */
-.map-tile { padding: 0; }
+.map-tile { padding: 0; min-height: 100%; }
 .map-tile .card-label { position: absolute; top: 16px; left: 18px; z-index: 3; }
 .map-canvas {
   position: absolute; inset: 0;
   background: #0e1117;
   overflow: hidden;
 }
-.map-canvas svg { width: 100%; height: 100%; display: block; }
-.map-pin {
-  position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%);
+.map-tiles {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(150%, 760px);
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   pointer-events: none;
+  transform: translate(-50%, -50%) rotate(-6deg) scale(1.08);
+  transform-origin: center;
+}
+.map-tiles img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.map-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, #05070be6 0%, #05070b66 38%, #05070be8 100%),
+    radial-gradient(circle at 50% 52%, transparent 0 24%, #05070b7a 64%, #05070bf0 100%);
+}
+.map-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(#ffffff0f 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0f 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at 50% 52%, #000 0 45%, transparent 78%);
+}
+.map-pin {
+  position: absolute; left: 46%; top: 58%; transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
 }
 .map-pin .ring {
   width: 80px; height: 80px; border-radius: 50%;
