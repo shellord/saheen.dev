@@ -1,10 +1,9 @@
 'use client'
 
-import { useEffect } from 'react'
-import { motion, useAnimate } from 'motion/react'
+import { motion } from 'motion/react'
 import { HoverCard } from '@/components/HoverCard'
 import { Icons } from '@/components/icons'
-import { ease, reveal } from '@/lib/motion'
+import { reveal } from '@/lib/motion'
 
 const RINGS = [
   { rad: 64, pct: 0.78, color: '#ff89b1' },
@@ -13,20 +12,8 @@ const RINGS = [
 ]
 
 export function FitTile({ index = 0 }: { readonly index?: number }) {
-  const [scope, animate] = useAnimate()
-
-  const runRings = () => {
-    RINGS.forEach(({ rad, pct }) => {
-      const len = 2 * Math.PI * rad
-      const off = (1 - pct) * len
-      animate(`[data-r="${rad}"]`, { strokeDashoffset: [len, off] }, { duration: 1.6, ease })
-    })
-  }
-
-  useEffect(() => { runRings() }, []) // eslint-disable-line react-hooks/exhaustive-deps
-
   return (
-    <motion.div className="t-fit" {...reveal(index)} ref={scope} onHoverStart={runRings}>
+    <motion.div className="t-fit" {...reveal(index)}>
       <HoverCard className="fit-tile">
         <div className="card-label">{Icons.fit}Activity · today</div>
         <div className="rings-wrap">
@@ -38,7 +25,6 @@ export function FitTile({ index = 0 }: { readonly index?: number }) {
                 <g key={rad}>
                   <circle cx="80" cy="80" r={rad} fill="none" stroke={color} strokeWidth="9" opacity="0.12" />
                   <circle
-                    data-r={rad}
                     cx="80" cy="80" r={rad}
                     fill="none" stroke={color} strokeWidth="9"
                     strokeLinecap="round"
